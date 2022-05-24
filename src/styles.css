@@ -1,0 +1,11 @@
+body {
+  font-family: Helvetica, sans-serif;
+  color: white;
+  background: #333;
+}
+body .alert {
+  padding: 5px;
+}
+body .alert button {
+  outline: none;
+}

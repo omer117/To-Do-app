@@ -1,0 +1,14 @@
+{
+  "name": "gulp_scss",
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.9",
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "node": "^17.7.2",
+    "sass": "^1.51.0"
+  }
+}
