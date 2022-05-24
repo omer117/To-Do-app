@@ -1,15 +1,29 @@
-$font-famaly: Helvetica, sans-serif;
-$primary-color: #333;
-$text-color: white;
-
-body {
-  font-family: $font-famaly;
-  color: $text-color;
-  background: $primary-color;
-  .alert {
-    padding: 5px;
-    button {
-      outline: none;
-    }
-  }
+@mixin div-maker ($h,$w,$mrg,$brdr,$backGC,$brdrds){
+  height: $h;
+  width: $w;
+  margin: $mrg;
+  border: $brdr;
+  background-color: $backGC;
+  border-radius: $brdrds;
 }
+body{
+  background-color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cnt {
+  @include div-maker(600px,390px,auto ,solid 2px, #68A7AD, 25px);
+margin-top: 40px;
+text-align: center;
+}
+
+.inside{
+background-color: #99C4C8;
+margin: 20px 30px;
+text-align: center;
+border-radius: 25px;
+}
+
+.missionChecked{
+display: block;
+}
+

@@ -1,11 +1,26 @@
 body {
-  font-family: Helvetica, sans-serif;
-  color: white;
-  background: #333;
+  background-color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
 }
-body .alert {
-  padding: 5px;
+
+.cnt {
+  height: 600px;
+  width: 390px;
+  margin: auto;
+  border: solid 2px;
+  background-color: #68A7AD;
+  border-radius: 25px;
+  margin-top: 40px;
+  text-align: center;
 }
-body .alert button {
-  outline: none;
+
+.inside {
+  background-color: #99C4C8;
+  margin: 20px 30px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.missionChecked {
+  display: block;
 }

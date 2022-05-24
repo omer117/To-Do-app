@@ -1,3 +1,3 @@
-function hi() {
-  alert('Hi!');
+function addtolist(){
+  alert('s')
 }
