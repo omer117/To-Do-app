@@ -1,3 +1,0 @@
-function addtolist(){
-  alert('s')
-}
