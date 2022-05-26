@@ -1,4 +1,5 @@
 let taskCounter = 0;
+let bool = true;
 function addToList() {
     const mainDiv = document.getElementById('center');
     const newListItem = document.createElement('input');
@@ -9,6 +10,7 @@ function addToList() {
     newListItem.id = "task" + taskCounter + " li";
     newListItem.type = "checkbox";
     taskCounter++;
+    label.id = "label" + taskCounter;
     let inputValue = document.getElementById("myInput").value;
     let t = document.createTextNode(inputValue);
     if (inputValue === '') {
@@ -24,7 +26,7 @@ function addToList() {
     editBtn.setAttribute('onclick', 'editTxt(this.id)');
     editBtn.classList.add('edit');
     editBtn.innerText = "Edit";
-    editBtn.id = 'edit';
+    editBtn.id = 'edit' + taskCounter;
     removeBtn.setAttribute('onclick', 'removeTxt(this.id)');
     removeBtn.classList.add('remove');
     removeBtn.id = 'remove';
@@ -37,13 +39,33 @@ function addToList() {
     seconderyDiv.appendChild(editBtn);
 }
 // Make a button EDIT function
-function editTxt() {
+function editTxt(id) {
+    if (bool) {
+        let taskDiv = document.getElementById("label" + id[id.length - 1]);
+        let content = taskDiv.innerHTML;
+        let input = document.createElement("input");
+        input.setAttribute("id", "toReplace" + id[id.length - 1]);
+        input.setAttribute("value", content);
+        if (taskDiv)
+            taskDiv.replaceWith(input);
+        bool = false;
+    }
+    else {
+        let taskDiv = document.getElementById("toReplace" + id[id.length - 1]);
+        let newContent = (document.getElementById("toReplace" + id[id.length - 1])).value;
+        if (taskDiv)
+            taskDiv.innerHTML = "";
+        let newLable = document.createElement("lable");
+        newLable.setAttribute("id", "lable" + taskCounter);
+        newLable.innerHTML = newContent;
+        if (taskDiv)
+            taskDiv.replaceWith(newLable);
+        bool = true;
+    }
 }
 // MAKE A BUTTON : DELETE function 
 function removeTxt(id) {
     let tasksDiv = document.getElementById(id).parentElement;
-    console.log(id);
-    console.log(tasksDiv);
     if (tasksDiv)
         tasksDiv.innerHTML = "";
     taskCounter--;
@@ -54,5 +76,4 @@ function resetfile() {
         fDiv.innerHTML = "";
     taskCounter = 0;
     localStorage.clear();
-    console.log(localStorage);
 }
