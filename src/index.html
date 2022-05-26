@@ -1,28 +1,28 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>SCSS</title>
   <base href="/">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js"></script>
 </head>
+
 <body>
-<div class="cnt">
-  <div class="inside">
-  <h1>Todo App</h1>
-  <input type="text" name="input" placeholder="What do you want to do...">
-  <span onclick="addToList()" class="addTL">Add!</span>
-</div>
-<div class="theList">
-  <ul>
-    <li>Hit the gym!</li>
-    <li>Learn python!</li>
-    <li>Create playlists on Spotify</li>
-  </ul>
-</div>
-</div>
+  <div class="cnt">
+    <div class="header">
+      <h1>Todo App</h1>
+      <input type="text" name="input" placeholder="What do you want to do...">
+      <span onclick="addToList()">Add!</span>
+    </div>
+    <div id="center">
+      <input type="checkbox" id="task">
+    </div>
+    <div id="footer"></div>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "watch": true,
+        "lib": ["DOM", "ES2015"],
+    },
+    "files": ["src/app.ts"],
+    "include": ["src/app.ts"],
+    "exclude": ["/node_modules"],
+}
