@@ -15,7 +15,6 @@ $green: #06842c;
   }
 }
 
-
 @mixin div-maker ($h, $w, $mrg, $brdr, $backGC, $brdrds) {
   height: $h;
   width: $w;
@@ -39,6 +38,14 @@ body {
   background-color: bisque;
   font-family:'Courier New', Courier, monospace
 }
+
+.addBtn{
+  margin-bottom: 10px;
+}
+#myinput{
+  margin-bottom: 10px
+}
+
 
 .cnt {
   @include div-maker(70%, 40%, auto, solid 2px, #68A7AD, 25px);
@@ -182,12 +189,12 @@ padding-top: 14px;
 
   &:disabled {
     cursor: default;
-  }
+  };
 
   &:focus {
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
-  }
-}
+  };
+};
 
 
 .header {
@@ -195,9 +202,11 @@ padding-top: 14px;
   margin: 20px 30px;
   text-align: center;
   border-radius: 25px;
-}
+};
 
-.missionChecked {
-  display: block;
-  text-decoration: line-through;
-}
+
+
+.clear{
+margin-bottom: 20px;
+margin-top: 20px;
+  }

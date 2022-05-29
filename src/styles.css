@@ -11,6 +11,14 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
+.addBtn {
+  margin-bottom: 10px;
+}
+
+#myinput {
+  margin-bottom: 10px;
+}
+
 .cnt {
   height: 70%;
   width: 40%;
@@ -160,7 +168,7 @@ label {
   border-radius: 25px;
 }
 
-.missionChecked {
-  display: block;
-  text-decoration: line-through;
+.clear {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }

@@ -68,7 +68,7 @@ function editTxt(id: string) {
         )).value;
         if (taskDiv) taskDiv.innerHTML = "";
         let newLable = document.createElement("lable");
-        newLable.setAttribute("id", "lable" + taskCounter);
+        newLable.setAttribute("id", "lable" + (taskCounter-1));
         newLable.innerHTML = newContent;
         if (taskDiv) taskDiv.replaceWith(newLable);
             bool = true;
